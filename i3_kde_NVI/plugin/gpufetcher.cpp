@@ -8,8 +8,9 @@ GPUFetcher::~GPUFetcher() {
 }
 
 QString GPUFetcher::getGPUStr(){
-    process->start("prime-select query");
+    process->start("bash",QStringList() << "-c" << "prime-select query | awk \'{printf \"%s\",toupper(substr($1,1,1))tolower(substr($1,2,1))}\'");
     process->waitForFinished();
+    /* qDebug() << process->program(); */
     result = QString(process->readAllStandardOutput());
     
     return result;

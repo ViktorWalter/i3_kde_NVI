@@ -4,6 +4,7 @@
 
 #include <QObject>
 #include <QProcess>
+#include <QDebug>
 
 class GPUFetcher : public QObject
 {

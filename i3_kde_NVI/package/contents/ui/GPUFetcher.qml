@@ -27,7 +27,7 @@ Item {
             return gpuFetcherPlugin
         }
         
-        if (!gpuFailedToInitialize) {
+        if (!gpuFetcherFailedToInitialize) {
             console.log('Initializing gpuFetcher plugin...')
             try {
                 gpuFetcherPlugin = Qt.createQmlObject('import org.kde.private.gpufetcher 1.0 as WW; WW.GPUFetcher {}', gpuFetcher, 'GPUFetcher')

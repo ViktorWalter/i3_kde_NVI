@@ -22,7 +22,7 @@ Item {
   }
 
   Timer {
-    interval: 100; running: true; repeat: true;
+    interval: 5000; running: true; repeat: true;
     onTriggered: label.text = gpuFetcher.getGPUStr();
   }
 
